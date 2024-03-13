@@ -1,0 +1,95 @@
+@charset 'utf-8';
+@import url(./my_reset.css);
+/* @font-face {
+  font-family: "S-CoreDream-3Light";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+} */
+@font-face {
+  font-family: "GmarketSansbold";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+/* :root {
+  font-size: 16px;
+} */
+/* 
+font-family: "Font Awesome 6 Free";
+font-weight: 900;
+Solid → 900
+Regular, Brands → 400
+Light → 300
+ */
+/* body {
+  font-family: "Font Awesome 6 Free";
+} */
+.mw {
+  max-width: 1440px;
+  width: calc(100%-4rem);
+  margin: auto;
+}
+.hd {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+.hd .main-logo {
+  padding: 1rem 0;
+  width: 120px;
+}
+.hd nav::before {
+  background-color: aliceblue;
+  content: "가려짐";
+  position: absolute;
+  justify-content: center;
+  top: 100%;
+  left: -700%;
+  width: 1000%;
+  height: 150%;
+  opacity: 0;
+  transition: 0.3s;
+}
+.hd nav:hover::before {
+  height: 120px;
+  opacity: 1;
+}
+.hd .gnb {
+  display: flex;
+}
+.hd .gnb a {
+  display: block;
+  white-space: nowrap;
+}
+.hd .gnb > li > a {
+  padding: 1rem 2rem;
+  font-family: "gmarketsansbold";
+  font-size: 21px;
+  color: #144aaa;
+  white-space: nowrap;
+  font-weight: bold;
+}
+.hd .gnb:hover .sub {
+  opacity: 1;
+  visibility: visible;
+}
+.hd .sub {
+  visibility: hidden;
+  position: absolute;
+  width: 100%;
+  padding-top: 30px;
+  /* top: 100%; */
+  /* text-align: center; */
+  /* display: none; */
+  transition: opacity 0.5s;
+  opacity: 0;
+  /* height: 0; */
+  overflow: hidden;
+}
+.hd .sub a {
+  padding: 0.5rem;
+}
